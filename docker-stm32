@@ -1,0 +1,13 @@
+#!/bin/bash
+
+uid="$(id -u)"
+gid="$(id -g)"
+dir="$(pwd)"
+
+set -ex
+docker run -it --rm \
+    -e uid="${uid}" \
+    -e gid="${gid}" \
+    -v "${dir}:${dir}" \
+    -w "${dir}" \
+    wsbu/toolchain-stm32:v1.0.0 "$@"
