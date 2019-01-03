@@ -1,0 +1,12 @@
+[build_requires]
+gcc-arm-none-eabi/7.3.1@wsbu/stable
+[settings]
+os_build=Linux
+arch=armv7hf
+arch_build=x86_64
+compiler=gcc
+compiler.version=7.3
+compiler.libcxx=libstdc++11
+build_type=Release
+[options]
+[env]
