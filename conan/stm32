@@ -1,6 +1,7 @@
 [build_requires]
 gcc-arm-none-eabi/7.3.1@wsbu/stable
 [settings]
+os=None
 os_build=Linux
 arch=armv7hf
 arch_build=x86_64
