@@ -27,6 +27,8 @@ if (( $# == 0 )); then
     set sdf-e
 	${su_cmd} /bin/bash
 else
+    # Headless script uses relative path to Eclipse IDE
+    cd "${INSTALL_PATH}/ide"
     set -e
-	${su_cmd} /usr/local/bin/eclipse-headless.sh "$@"
+	${su_cmd} "./headless.sh" "$@"
 fi
